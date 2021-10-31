@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="T2009M.AppllicationLayout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <NavigationView x:Name="MyNavView" BackRequested="MyNavView_BackRequested" ItemInvoked="MyNavView_ItemInvoked">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Dasboard" Icon="Home" Tag="home"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Content="Create A Song" Icon="Add" Tag="createMusic"/>
+            <NavigationViewItem Content="List Song" Icon="Audio" Tag="listSong"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Content="Login" Icon="Permissions" Tag="login"/>
+            <NavigationViewItem Content="Register" Icon="Contact" Tag="register"/>
+        </NavigationView.MenuItems>
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox>
+            </AutoSuggestBox>
+        </NavigationView.AutoSuggestBox>
+        <ScrollViewer>
+            <Frame x:Name="ContentPage" Padding="10"/>
+        </ScrollViewer>
+    </NavigationView>
+</Page>

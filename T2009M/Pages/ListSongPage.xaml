@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="T2009M.Pages.ListSongPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView x:Name="songList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width=""/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding thumbnail}"/>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="{Binding name}"/>
+                            <TextBlock Text="{Binding description}"/>
+                            <TextBlock Text="{Binding singer}"/>
+                            <TextBlock Text="{Binding author}"/>
+                            <TextBlock Text="{Binding link}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
